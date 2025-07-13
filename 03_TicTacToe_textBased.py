@@ -3,16 +3,15 @@ tictactoe = [[0,0,0],
              [0,0,0],
              [0,0,0]]
 
-# This code initializes a 3x3 Tic Tac Toe board represented as a list of lists.
-for row in tictactoe:
-    print(row)  # This will print each row of the Tic Tac Toe board.
+
+def game_board():
+    print (" 0 1 2")
+    for count, row in enumerate(tictactoe):
+        print(count, row)
 
 
-print(" " * 3)  # This will print a separator line for better readability.
+game_board()
 
-for count, row in enumerate(tictactoe):
-    print(count, row)
-    for item in row:
-        print(item)  # This will print each item in the row of the Tic Tac Toe board.
+tictactoe[0][1] = 1
 
-    
+game_board()
